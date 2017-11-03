@@ -1,9 +1,27 @@
 dofile("page.lua")
 dofile("pins_json.lua")
-dofile("page_not_found.lua")
 
 function delayed(t, f)
     tmr.create():alarm(t, tmr.ALARM_SINGLE, f)
+end
+
+function serve_static_file(socket, path)
+    if file.open(path) then
+
+        local function send(localSocket)
+            local line = file.readline()
+            if line == nil then
+                file.close()
+                localSocket:close()    
+            else
+                localSocket:send(line)
+            end
+        end
+
+        socket:on("sent", send)
+        send(socket)
+
+    end
 end
 
 srv = net.createServer(net.TCP)
@@ -17,16 +35,12 @@ srv:listen(80, function(conn)
         print("path = ", path)
         print("vars = ", vars)
         if method == "GET" and path == "/" then
-            client:send(page())
+            serve_static_file(client, "page.html")
         elseif method == "GET" and path == "/pins.json" then
-            client:send(pins_json())
+            client:send(pins_json(), function() client:close() end)
         else
-            client:send(page_not_found())
+            serve_static_file(client, "page_not_found.html")
         end
-        delayed(100, function()
-            print("closing socket")
-            client:close()
-        end)
         collectgarbage()
     end)
 end)
