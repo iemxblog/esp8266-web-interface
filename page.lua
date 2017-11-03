@@ -15,8 +15,8 @@ function row(pin1, pin2)
     return '<tr>\n' .. pin1 .. pin2 .. '\n</tr>'
 end
 
-
-page = [[<html>
+function page()
+    return [[<html>
     <head>
         <title>ESP8266</title>
     </head>
@@ -56,3 +56,4 @@ page = [[<html>
     </body>
 </html>
 ]]
+end
