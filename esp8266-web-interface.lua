@@ -1,9 +1,4 @@
-dofile("page.lua")
 dofile("data_json.lua")
-
-function delayed(t, f)
-    tmr.create():alarm(t, tmr.ALARM_SINGLE, f)
-end
 
 function serve_static_file(socket, path)
     if file.open(path) then
