@@ -9,11 +9,22 @@
             $.ajax({
                 url: "/data.json",
                 type: "GET",
-                datatype: "json"
+                datatype: "json",
+                timeout: 1000
             })
             .done(function(json) {
-                $("#debug").val(json);
-                console.log(json);
+                var data = JSON.parse(json);
+                $("#ADC0").text(data["ADC0"]);
+                $("#D0").text(data["D0"]);
+                $("#D1").text(data["D1"]);
+                $("#D2").text(data["D2"]);
+                $("#D3").text(data["D3"]);
+                $("#D4").text(data["D4"]);
+                $("#D5").text(data["D5"]);
+                $("#D6").text(data["D6"]);
+                $("#D7").text(data["D7"]);
+                $("#D8").text(data["D8"]);
+                $("#heap").text("heap : " + data["heap"]);
             })
         }, 1000);
     </script>
@@ -32,185 +43,184 @@
     </tr>
     <tr>
         <td>ADC0</td>
-        <td id="pin_ADC0">0</td><td></td>
+        <td id="ADC0">0</td><td></td>
         <td></td>
         <td></td>
         <td>D0</td>
-        <td id="pin_D0">0</td>
+        <td id="D0">0</td>
         <td><button>IN</button></td>
         <td><button>0</button></td>
         <td><button>1</button></td>
     </tr>
     <tr>
         <td>RSV</td>
-        <td id="pin_RSV">0</td>
+        <td id="RSV">0</td>
         <td></td>
         <td></td>
         <td></td>
         <td>D1</td>
-        <td id="pin_D1">0</td>
+        <td id="D1">0</td>
         <td><button>IN</button></td>
         <td><button>0</button></td>
         <td><button>1</button></td>
     </tr>
     <tr>
         <td>RSV</td>
-        <td id="pin_RSV">0</td>
+        <td id="RSV">0</td>
         <td></td>
         <td></td>
         <td></td>
         <td>D2</td>
-        <td id="pin_D2">0</td>
+        <td id="D2">0</td>
         <td><button>IN</button></td>
         <td><button>0</button></td>
         <td><button>1</button></td>
     </tr>
     <tr>
         <td>RSV</td>
-        <td id="pin_RSV">0</td>
+        <td id="RSV">0</td>
         <td></td>
         <td></td>
         <td></td>
         <td>D3</td>
-        <td id="pin_D3">0</td>
+        <td id="D3">0</td>
         <td><button>IN</button></td>
         <td><button>0</button></td>
         <td><button>1</button></td>
     </tr>
     <tr>
         <td>RSV</td>
-        <td id="pin_RSV">0</td>
+        <td id="RSV">0</td>
         <td></td>
         <td></td>
         <td></td>
         <td>D4</td>
-        <td id="pin_D4">0</td>
+        <td id="D4">0</td>
         <td><button>IN</button></td>
         <td><button>0</button></td>
         <td><button>1</button></td>
     </tr>
     <tr>
         <td>RSV</td>
-        <td id="pin_RSV">0</td>
+        <td id="RSV">0</td>
         <td></td>
         <td></td>
         <td></td>
         <td>3.3V</td>
-        <td id="pin_3.3V">0</td>
+        <td id="3.3V">0</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>RSV</td>
-        <td id="pin_RSV">0</td>
+        <td id="RSV">0</td>
         <td></td>
         <td></td>
         <td></td>
         <td>GND</td>
-        <td id="pin_GND">0</td>
+        <td id="GND">0</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>GND</td>
-        <td id="pin_GND">0</td>
+        <td id="GND">0</td>
         <td></td>
         <td></td>
         <td></td>
         <td>D5</td>
-        <td id="pin_D5">0</td>
+        <td id="D5">0</td>
         <td><button>IN</button></td>
         <td><button>0</button></td>
         <td><button>1</button></td>
     </tr>
     <tr>
         <td>3.3V</td>
-        <td id="pin_3.3V">0</td>
+        <td id="3.3V">0</td>
         <td></td>
         <td></td>
         <td></td>
         <td>D6</td>
-        <td id="pin_D6">0</td>
+        <td id="D6">0</td>
         <td><button>IN</button></td>
         <td><button>0</button></td>
         <td><button>1</button></td>
     </tr>
     <tr>
         <td>GND</td>
-        <td id="pin_GND">0</td>
+        <td id="GND">0</td>
         <td></td>
         <td></td>
         <td></td>
         <td>D7</td>
-        <td id="pin_D7">0</td>
+        <td id="D7">0</td>
         <td><button>IN</button></td>
         <td><button>0</button></td>
         <td><button>1</button></td>
     </tr>
     <tr>
         <td>3.3V</td>
-        <td id="pin_3.3V">0</td>
+        <td id="3.3V">0</td>
         <td></td>
         <td></td>
         <td></td>
         <td>D8</td>
-        <td id="pin_D8">0</td>
+        <td id="D8">0</td>
         <td><button>IN</button></td>
         <td><button>0</button></td>
         <td><button>1</button></td>
     </tr>
     <tr>
         <td>EN</td>
-        <td id="pin_EN">0</td>
+        <td id="EN">0</td>
         <td></td>
         <td></td>
         <td></td>
         <td>RX</td>
-        <td id="pin_RX">0</td>
+        <td id="RX">0</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>RST</td>
-        <td id="pin_RST">0</td>
+        <td id="RST">0</td>
         <td></td>
         <td></td>
         <td></td>
         <td>TX</td>
-        <td id="pin_TX">0</td>
+        <td id="TX">0</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>GND</td>
-        <td id="pin_GND">0</td>
+        <td id="GND">0</td>
         <td></td>
         <td></td>
         <td></td>
         <td>GND</td>
-        <td id="pin_GND">0</td>
+        <td id="GND">0</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>5V</td>
-        <td id="pin_5V">0</td>
+        <td id="5V">0</td>
         <td></td>
         <td></td>
         <td></td>
         <td>3.3V</td>
-        <td id="pin_3.3V">0</td>
+        <td id="3.3V">0</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     </table>
 <p id="heap"></p>
-<textarea id="debug"></textarea>
 </body>
 </html>

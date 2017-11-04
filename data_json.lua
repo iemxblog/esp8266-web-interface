@@ -1,6 +1,6 @@
 function data_table()
     return {
-        A0 = adc.read(0),
+        ADC0 = adc.read(0),
         D0 = gpio.read(0),
         D1 = gpio.read(1),
         D2 = gpio.read(2),
