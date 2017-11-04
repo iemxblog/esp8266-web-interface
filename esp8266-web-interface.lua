@@ -1,5 +1,5 @@
 dofile("page.lua")
-dofile("pins_json.lua")
+dofile("data_json.lua")
 
 function delayed(t, f)
     tmr.create():alarm(t, tmr.ALARM_SINGLE, f)
@@ -36,8 +36,8 @@ srv:listen(80, function(conn)
         print("vars = ", vars)
         if method == "GET" and path == "/" then
             serve_static_file(client, "page.html")
-        elseif method == "GET" and path == "/pins.json" then
-            client:send(pins_json(), function() client:close() end)
+        elseif method == "GET" and path == "/data.json" then
+            client:send(data_json(), function() client:close() end)
         else
             serve_static_file(client, "page_not_found.html")
         end

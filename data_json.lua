@@ -1,4 +1,4 @@
-function pins_table()
+function data_table()
     return {
         A0 = adc.read(0),
         D0 = gpio.read(0),
@@ -9,7 +9,8 @@ function pins_table()
         D5 = gpio.read(5),
         D6 = gpio.read(6),
         D7 = gpio.read(7),
-        D8 = gpio.read(8)
+        D8 = gpio.read(8),
+        heap = node.heap()
     }
 end
 
@@ -24,6 +25,6 @@ function tojson(t)
     return ret
 end
 
-function pins_json()
-    return tojson(pins_table())
+function data_json()
+    return tojson(data_table())
 end

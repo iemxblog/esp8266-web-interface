@@ -5,7 +5,17 @@
     </head>
     <body>
     <script type="text/javascript">
-        setInterval(function() { alert("Hello, world!"); }, 10000);
+        setInterval(function() { 
+            $.ajax({
+                url: "/data.json",
+                type: "GET",
+                datatype: "json"
+            })
+            .done(function(json) {
+                $("#debug").val(json);
+                console.log(json);
+            })
+        }, 1000);
     </script>
     <table>
     <tr>
