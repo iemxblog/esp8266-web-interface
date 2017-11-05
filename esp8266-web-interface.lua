@@ -33,7 +33,8 @@ srv:listen(80, function(conn)
         if method == "GET" and path == "/" then
             serve_static_file(client, "page.html")
         elseif method == "GET" and path == "/data.json" then
-            client:send(data_json(), function() client:close() end)
+            client:on("sent", function(c) c:close() end)
+            client:send(data_json())
         else
             serve_static_file(client, "page_not_found.html")
         end
