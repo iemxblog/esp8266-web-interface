@@ -1,4 +1,9 @@
 dofile("data_json.lua")
+dofile("set_pin_state.lua")
+
+function debug(...)
+    print(unpack(arg))
+end
 
 function serve_static_file(socket, path)
     if file.open(path) then
@@ -26,15 +31,19 @@ srv:listen(80, function(conn)
         if method == nil then
             _, _, method, path = string.find(request, "([A-Z]+) (.+) HTTP")
         end
-        print("method = ", method)
-        print("path = ", path)
-        print("vars = ", vars)
-        print("(heap = ", node.heap(), ")")
+        debug("method = ", method)
+        debug("path = ", path)
+        debug("vars = ", vars)
+        debug("(heap = ", node.heap(), ")")
         if method == "GET" and path == "/" then
             serve_static_file(client, "page.html")
         elseif method == "GET" and path == "/data.json" then
             client:on("sent", function(c) c:close() end)
             client:send(data_json())
+        elseif method == "GET" and string.find(path, "/pin/") ~= nil then
+            pinNumber, pinState = string.match(path, "/pin/(%d+)/(.+)")
+            debug("setting pin " .. pinNumber .. " to state " .. pinState)
+            set_pin_state(tonumber(pinNumber), pinState)
         else
             serve_static_file(client, "page_not_found.html")
         end

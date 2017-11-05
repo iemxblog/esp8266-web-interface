@@ -32,10 +32,10 @@
     <tr>
         <th>Name</th>
         <th>Val</th>
-        <th>In</th>
-        <th>In pullup</th>
-        <th>Out 0</th>
-        <th>Out 1</th>
+        <th>Input</th>
+        <th>Input pullup</th>
+        <th>Output 0</th>
+        <th>Output 1</th>
     </tr>
     <tr>
         <td>ADC0</td>
@@ -47,74 +47,74 @@
     <tr>
         <td>D0</td>
         <td id="D0">0</td>
-        <td><button>IN</button></td>
-        <td><button>IN PULLUP</button></td>
-        <td><button>0</button></td>
-        <td><button>1</button></td>
+        <td><button onclick="$.ajax({url: '/pin/0/INPUT', type: 'GET'});">INPUT</button></td>
+        <td><button onclick="$.ajax({url: '/pin/0/INPUT_PULLUP', type: 'GET'});">INPUT_PULLUP</button></td>
+        <td><button onclick="$.ajax({url: '/pin/0/OUTPUT_0', type: 'GET'});">OUTPUT_0</button></td>
+        <td><button onclick="$.ajax({url: '/pin/0/OUTPUT_1', type: 'GET'});">OUTPUT_1</button></td>
     </tr>
     <tr>
         <td>D1</td>
         <td id="D1">0</td>
-        <td><button>IN</button></td>
-        <td><button>IN PULLUP</button></td>
-        <td><button>0</button></td>
-        <td><button>1</button></td>
+        <td><button onclick="$.ajax({url: '/pin/1/INPUT', type: 'GET'});">INPUT</button></td>
+        <td><button onclick="$.ajax({url: '/pin/1/INPUT_PULLUP', type: 'GET'});">INPUT_PULLUP</button></td>
+        <td><button onclick="$.ajax({url: '/pin/1/OUTPUT_0', type: 'GET'});">OUTPUT_0</button></td>
+        <td><button onclick="$.ajax({url: '/pin/1/OUTPUT_1', type: 'GET'});">OUTPUT_1</button></td>
     </tr>
     <tr>
         <td>D2</td>
         <td id="D2">0</td>
-        <td><button>IN</button></td>
-        <td><button>IN PULLUP</button></td>
-        <td><button>0</button></td>
-        <td><button>1</button></td>
+        <td><button onclick="$.ajax({url: '/pin/2/INPUT', type: 'GET'});">INPUT</button></td>
+        <td><button onclick="$.ajax({url: '/pin/2/INPUT_PULLUP', type: 'GET'});">INPUT_PULLUP</button></td>
+        <td><button onclick="$.ajax({url: '/pin/2/OUTPUT_0', type: 'GET'});">OUTPUT_0</button></td>
+        <td><button onclick="$.ajax({url: '/pin/2/OUTPUT_1', type: 'GET'});">OUTPUT_1</button></td>
     </tr>
     <tr>
         <td>D3</td>
         <td id="D3">0</td>
-        <td><button>IN</button></td>
-        <td><button>IN PULLUP</button></td>
-        <td><button>0</button></td>
-        <td><button>1</button></td>
+        <td><button onclick="$.ajax({url: '/pin/3/INPUT', type: 'GET'});">INPUT</button></td>
+        <td><button onclick="$.ajax({url: '/pin/3/INPUT_PULLUP', type: 'GET'});">INPUT_PULLUP</button></td>
+        <td><button onclick="$.ajax({url: '/pin/3/OUTPUT_0', type: 'GET'});">OUTPUT_0</button></td>
+        <td><button onclick="$.ajax({url: '/pin/3/OUTPUT_1', type: 'GET'});">OUTPUT_1</button></td>
     </tr>
     <tr>
         <td>D4</td>
         <td id="D4">0</td>
-        <td><button>IN</button></td>
-        <td><button>IN PULLUP</button></td>
-        <td><button>0</button></td>
-        <td><button>1</button></td>
+        <td><button onclick="$.ajax({url: '/pin/4/INPUT', type: 'GET'});">INPUT</button></td>
+        <td><button onclick="$.ajax({url: '/pin/4/INPUT_PULLUP', type: 'GET'});">INPUT_PULLUP</button></td>
+        <td><button onclick="$.ajax({url: '/pin/4/OUTPUT_0', type: 'GET'});">OUTPUT_0</button></td>
+        <td><button onclick="$.ajax({url: '/pin/4/OUTPUT_1', type: 'GET'});">OUTPUT_1</button></td>
     </tr>
     <tr>
         <td>D5</td>
         <td id="D5">0</td>
-        <td><button>IN</button></td>
-        <td><button>IN PULLUP</button></td>
-        <td><button>0</button></td>
-        <td><button>1</button></td>
+        <td><button onclick="$.ajax({url: '/pin/5/INPUT', type: 'GET'});">INPUT</button></td>
+        <td><button onclick="$.ajax({url: '/pin/5/INPUT_PULLUP', type: 'GET'});">INPUT_PULLUP</button></td>
+        <td><button onclick="$.ajax({url: '/pin/5/OUTPUT_0', type: 'GET'});">OUTPUT_0</button></td>
+        <td><button onclick="$.ajax({url: '/pin/5/OUTPUT_1', type: 'GET'});">OUTPUT_1</button></td>
     </tr>
     <tr>
         <td>D6</td>
         <td id="D6">0</td>
-        <td><button>IN</button></td>
-        <td><button>IN PULLUP</button></td>
-        <td><button>0</button></td>
-        <td><button>1</button></td>
+        <td><button onclick="$.ajax({url: '/pin/6/INPUT', type: 'GET'});">INPUT</button></td>
+        <td><button onclick="$.ajax({url: '/pin/6/INPUT_PULLUP', type: 'GET'});">INPUT_PULLUP</button></td>
+        <td><button onclick="$.ajax({url: '/pin/6/OUTPUT_0', type: 'GET'});">OUTPUT_0</button></td>
+        <td><button onclick="$.ajax({url: '/pin/6/OUTPUT_1', type: 'GET'});">OUTPUT_1</button></td>
     </tr>
     <tr>
         <td>D7</td>
         <td id="D7">0</td>
-        <td><button>IN</button></td>
-        <td><button>IN PULLUP</button></td>
-        <td><button>0</button></td>
-        <td><button>1</button></td>
+        <td><button onclick="$.ajax({url: '/pin/7/INPUT', type: 'GET'});">INPUT</button></td>
+        <td><button onclick="$.ajax({url: '/pin/7/INPUT_PULLUP', type: 'GET'});">INPUT_PULLUP</button></td>
+        <td><button onclick="$.ajax({url: '/pin/7/OUTPUT_0', type: 'GET'});">OUTPUT_0</button></td>
+        <td><button onclick="$.ajax({url: '/pin/7/OUTPUT_1', type: 'GET'});">OUTPUT_1</button></td>
     </tr>
     <tr>
         <td>D8</td>
         <td id="D8">0</td>
-        <td><button>IN</button></td>
-        <td><button>IN PULLUP</button></td>
-        <td><button>0</button></td>
-        <td><button>1</button></td>
+        <td><button onclick="$.ajax({url: '/pin/8/INPUT', type: 'GET'});">INPUT</button></td>
+        <td><button onclick="$.ajax({url: '/pin/8/INPUT_PULLUP', type: 'GET'});">INPUT_PULLUP</button></td>
+        <td><button onclick="$.ajax({url: '/pin/8/OUTPUT_0', type: 'GET'});">OUTPUT_0</button></td>
+        <td><button onclick="$.ajax({url: '/pin/8/OUTPUT_1', type: 'GET'});">OUTPUT_1</button></td>
     </tr>
     </table>
 <p id="heap"></p>
