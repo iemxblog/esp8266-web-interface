@@ -34,7 +34,7 @@ srv:listen(80, function(conn)
         debug("method = ", method)
         debug("path = ", path)
         debug("vars = ", vars)
-        debug("(heap = ", node.heap(), ")")
+        debug("(free heap = " .. tostring(node.heap()) .. " bytes)")
         if method == "GET" and path == "/" then
             serve_static_file(client, "page.html")
         elseif method == "GET" and path == "/data.json" then
