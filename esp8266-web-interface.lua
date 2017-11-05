@@ -29,6 +29,7 @@ srv:listen(80, function(conn)
         print("method = ", method)
         print("path = ", path)
         print("vars = ", vars)
+        print("(heap = ", node.heap(), ")")
         if method == "GET" and path == "/" then
             serve_static_file(client, "page.html")
         elseif method == "GET" and path == "/data.json" then
