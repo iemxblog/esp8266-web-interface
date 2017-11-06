@@ -34,6 +34,10 @@
                 $("#D6").text(data["D6"]);
                 $("#D7").text(data["D7"]);
                 $("#D8").text(data["D8"]);
+                $("#D9").text(data["D9"]);
+                $("#D10").text(data["D10"]);
+                $("#D11").text(data["D11"]);
+                $("#D12").text(data["D12"]);
                 $("#heap").text("heap : " + data["heap"]);
             })
             .fail(function(xhr, status, errorThrown) {
@@ -132,6 +136,38 @@
         <td><button class="btn btn-info" onclick="$.ajax({url: '/pin/8/INPUT_PULLUP', type: 'GET', timeout:1000});">INPUT_PULLUP</button></td>
         <td><button class="btn btn-danger" onclick="$.ajax({url: '/pin/8/OUTPUT_0', type: 'GET', timeout:1000});">OUTPUT_0</button></td>
         <td><button class="btn btn-success" onclick="$.ajax({url: '/pin/8/OUTPUT_1', type: 'GET', timeout:1000});">OUTPUT_1</button></td>
+    </tr>
+    <tr>
+        <td>D9</td>
+        <td id="D9">0</td>
+        <td><button class="btn btn-info" onclick="$.ajax({url: '/pin/9/INPUT', type: 'GET', timeout:1000});">INPUT</button></td>
+        <td><button class="btn btn-info" onclick="$.ajax({url: '/pin/9/INPUT_PULLUP', type: 'GET', timeout:1000});">INPUT_PULLUP</button></td>
+        <td><button class="btn btn-danger" onclick="$.ajax({url: '/pin/9/OUTPUT_0', type: 'GET', timeout:1000});">OUTPUT_0</button></td>
+        <td><button class="btn btn-success" onclick="$.ajax({url: '/pin/9/OUTPUT_1', type: 'GET', timeout:1000});">OUTPUT_1</button></td>
+    </tr>
+    <tr>
+        <td>D10</td>
+        <td id="D10">0</td>
+        <td><button class="btn btn-info" onclick="$.ajax({url: '/pin/10/INPUT', type: 'GET', timeout:1000});">INPUT</button></td>
+        <td><button class="btn btn-info" onclick="$.ajax({url: '/pin/10/INPUT_PULLUP', type: 'GET', timeout:1000});">INPUT_PULLUP</button></td>
+        <td><button class="btn btn-danger" onclick="$.ajax({url: '/pin/10/OUTPUT_0', type: 'GET', timeout:1000});">OUTPUT_0</button></td>
+        <td><button class="btn btn-success" onclick="$.ajax({url: '/pin/10/OUTPUT_1', type: 'GET', timeout:1000});">OUTPUT_1</button></td>
+    </tr>
+    <tr>
+        <td>D11</td>
+        <td id="D11">0</td>
+        <td><button class="btn btn-info" onclick="$.ajax({url: '/pin/11/INPUT', type: 'GET', timeout:1000});">INPUT</button></td>
+        <td><button class="btn btn-info" onclick="$.ajax({url: '/pin/11/INPUT_PULLUP', type: 'GET', timeout:1000});">INPUT_PULLUP</button></td>
+        <td><button class="btn btn-danger" onclick="$.ajax({url: '/pin/11/OUTPUT_0', type: 'GET', timeout:1000});">OUTPUT_0</button></td>
+        <td><button class="btn btn-success" onclick="$.ajax({url: '/pin/11/OUTPUT_1', type: 'GET', timeout:1000});">OUTPUT_1</button></td>
+    </tr>
+    <tr>
+        <td>D12</td>
+        <td id="D12">0</td>
+        <td><button class="btn btn-info" onclick="$.ajax({url: '/pin/12/INPUT', type: 'GET', timeout:1000});">INPUT</button></td>
+        <td><button class="btn btn-info" onclick="$.ajax({url: '/pin/12/INPUT_PULLUP', type: 'GET', timeout:1000});">INPUT_PULLUP</button></td>
+        <td><button class="btn btn-danger" onclick="$.ajax({url: '/pin/12/OUTPUT_0', type: 'GET', timeout:1000});">OUTPUT_0</button></td>
+        <td><button class="btn btn-success" onclick="$.ajax({url: '/pin/12/OUTPUT_1', type: 'GET', timeout:1000});">OUTPUT_1</button></td>
     </tr>
     </tbody>
     </table>

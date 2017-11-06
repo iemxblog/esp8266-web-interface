@@ -10,6 +10,10 @@ function data_table()
         D6 = gpio.read(6),
         D7 = gpio.read(7),
         D8 = gpio.read(8),
+        D9 = gpio.read(9),
+        D10 = gpio.read(10),
+        D11 = gpio.read(11),
+        D12 = gpio.read(12),
         heap = node.heap()
     }
 end
