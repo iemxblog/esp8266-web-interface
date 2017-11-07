@@ -2,7 +2,7 @@ dofile("data_json.lua")
 dofile("set_pin_state.lua")
 
 function debug(...)
-    print(unpack(arg))
+--    print(unpack(arg))    -- uncomment to activate message printing
 end
 
 function serve_static_file(socket, path)
