@@ -31,4 +31,4 @@ $ ./install.sh
 ~~~~~
 
 Restart the ESP. A new wifi network beginning with "SetupGadget_" is created. Connect to it, then go to http://192.168.4.1/.
-Scan the the networks, choose yours, enter the password, connect to it, and the built-in led choose light show that you are connected. Restart the ESP again, and then the web interface is available at the ip address shown during the connection procedure.
+Scan the the networks, choose yours, enter the password, connect to it, and the built-in led should light up to show that you are connected. Restart the ESP again, and then the web interface is available at the ip address shown during the connection procedure.
