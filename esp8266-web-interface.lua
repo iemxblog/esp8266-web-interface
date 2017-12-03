@@ -1,6 +1,8 @@
 dofile("data_json.lua")
 dofile("set_pin_state.lua")
 
+print("Starting web interface...")
+
 function debug(...)
 --    print(unpack(arg))    -- uncomment to activate message printing
 end
