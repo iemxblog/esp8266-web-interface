@@ -1,6 +1,6 @@
 function data_table()
     return {
-        ADC0 = adc.read(0),
+        ADC0 = string.format("%.2fV", adc.read(0)*3.33/1024*0.94),  -- 0.94 is a correction factor
         D0 = gpio.read(0),
         D1 = gpio.read(1),
         D2 = gpio.read(2),
@@ -22,7 +22,9 @@ function tojson(t)
     local ret = '{'
     local sep = ''
     for k, v in pairs(t) do
-        ret = ret .. sep .. '"' .. k .. '"' .. " : " .. v
+        local v2
+        if type(v) == "string" then v2 = "\"" .. v .. "\"" else v2 = v end
+        ret = ret .. sep .. '"' .. k .. '"' .. " : " .. v2
         sep = ', '
     end
     ret = ret .. '}'
